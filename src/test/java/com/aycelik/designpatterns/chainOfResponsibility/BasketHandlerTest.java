@@ -8,10 +8,10 @@ public class BasketHandlerTest {
     public void testSuccessChain(){
 
         Product product = new Product("1", "product1", "merchant1", 1, 2);
-        BasketHandler productHandler = new ProductHandler();
-        BasketHandler priceHandler = new PriceHandler();
-        BasketHandler quantityHandler = new QuantityHandler();
-        BasketHandler merchantHandler = new MerchantHandler();
+        BasketHandler productHandler = new ProductFilter();
+        BasketHandler priceHandler = new PriceFilter();
+        BasketHandler quantityHandler = new QuantityFilter();
+        BasketHandler merchantHandler = new MerchantFilter();
 
         productHandler
                 .setNextHandler(priceHandler)
@@ -25,10 +25,10 @@ public class BasketHandlerTest {
     public void testFailChain_Scenario1(){
 
         Product product = new Product("", "product1", "merchant1", 1, 2);
-        BasketHandler productHandler = new ProductHandler();
-        BasketHandler priceHandler = new PriceHandler();
-        BasketHandler quantityHandler = new QuantityHandler();
-        BasketHandler merchantHandler = new MerchantHandler();
+        BasketHandler productHandler = new ProductFilter();
+        BasketHandler priceHandler = new PriceFilter();
+        BasketHandler quantityHandler = new QuantityFilter();
+        BasketHandler merchantHandler = new MerchantFilter();
 
         productHandler
                 .setNextHandler(priceHandler)
@@ -42,10 +42,10 @@ public class BasketHandlerTest {
     public void testFailChain_Scenario2(){
 
         Product product = new Product("1", "", "merchant1", 1, 2);
-        BasketHandler productHandler = new ProductHandler();
-        BasketHandler priceHandler = new PriceHandler();
-        BasketHandler quantityHandler = new QuantityHandler();
-        BasketHandler merchantHandler = new MerchantHandler();
+        BasketHandler productHandler = new ProductFilter();
+        BasketHandler priceHandler = new PriceFilter();
+        BasketHandler quantityHandler = new QuantityFilter();
+        BasketHandler merchantHandler = new MerchantFilter();
 
         productHandler
                 .setNextHandler(priceHandler)
@@ -59,10 +59,10 @@ public class BasketHandlerTest {
     public void testFailChain_Scenario3(){
 
         Product product = new Product("1", "product1", "", 1, 2);
-        BasketHandler productHandler = new ProductHandler();
-        BasketHandler priceHandler = new PriceHandler();
-        BasketHandler quantityHandler = new QuantityHandler();
-        BasketHandler merchantHandler = new MerchantHandler();
+        BasketHandler productHandler = new ProductFilter();
+        BasketHandler priceHandler = new PriceFilter();
+        BasketHandler quantityHandler = new QuantityFilter();
+        BasketHandler merchantHandler = new MerchantFilter();
 
         productHandler
                 .setNextHandler(priceHandler)
@@ -75,10 +75,10 @@ public class BasketHandlerTest {
     public void testFailChain_Scenario4(){
 
         Product product = new Product("1", "product1", "merchant1", 15, 2);
-        BasketHandler productHandler = new ProductHandler();
-        BasketHandler priceHandler = new PriceHandler();
-        BasketHandler quantityHandler = new QuantityHandler();
-        BasketHandler merchantHandler = new MerchantHandler();
+        BasketHandler productHandler = new ProductFilter();
+        BasketHandler priceHandler = new PriceFilter();
+        BasketHandler quantityHandler = new QuantityFilter();
+        BasketHandler merchantHandler = new MerchantFilter();
 
         productHandler
                 .setNextHandler(priceHandler)
@@ -92,10 +92,10 @@ public class BasketHandlerTest {
     public void testFailChain_Scenario5(){
 
         Product product = new Product("1", "product1", "merchant1", 1, -1);
-        BasketHandler productHandler = new ProductHandler();
-        BasketHandler priceHandler = new PriceHandler();
-        BasketHandler quantityHandler = new QuantityHandler();
-        BasketHandler merchantHandler = new MerchantHandler();
+        BasketHandler productHandler = new ProductFilter();
+        BasketHandler priceHandler = new PriceFilter();
+        BasketHandler quantityHandler = new QuantityFilter();
+        BasketHandler merchantHandler = new MerchantFilter();
 
         productHandler
                 .setNextHandler(priceHandler)

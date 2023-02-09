@@ -15,7 +15,7 @@ public abstract class BasketHandler {
     }
 }
 
-class ProductHandler extends BasketHandler {
+class ProductFilter extends BasketHandler {
     @Override
     public void handle(Product product) {
         if (product.id == null || product.id.isEmpty() || product.name == null || product.name.isEmpty()) {
@@ -28,7 +28,7 @@ class ProductHandler extends BasketHandler {
     }
 }
 
-class PriceHandler extends BasketHandler {
+class PriceFilter extends BasketHandler {
     @Override
     public void handle(Product product) {
         if (product.price < 0) {
@@ -43,7 +43,7 @@ class PriceHandler extends BasketHandler {
 
 }
 
-class QuantityHandler extends BasketHandler {
+class QuantityFilter extends BasketHandler {
     @Override
     public void handle(Product product) {
         if (product.quantity > 5) {
@@ -57,7 +57,7 @@ class QuantityHandler extends BasketHandler {
 
 }
 
-class MerchantHandler extends BasketHandler {
+class MerchantFilter extends BasketHandler {
     @Override
     public void handle(Product product) {
         if (product.merchant == null || product.merchant.isEmpty()) {
