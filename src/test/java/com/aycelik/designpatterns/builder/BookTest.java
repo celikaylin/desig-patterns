@@ -1,3 +1,5 @@
+package com.aycelik.designpatterns.builder;
+
 import com.aycelik.designpatterns.builder.Book;
 import org.junit.Assert;
 import org.junit.Test;
