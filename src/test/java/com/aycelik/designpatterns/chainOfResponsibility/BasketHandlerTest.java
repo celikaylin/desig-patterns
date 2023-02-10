@@ -22,7 +22,7 @@ public class BasketHandlerTest {
     }
 
     @Test
-    public void testFailChain_Scenario1(){
+    public void testFailChain_invalidProductId(){
 
         Product product = new Product("", "product1", "merchant1", 1, 2);
         BasketHandler productHandler = new ProductFilter();
@@ -39,7 +39,7 @@ public class BasketHandlerTest {
     }
 
     @Test
-    public void testFailChain_Scenario2(){
+    public void testFailChain_InvalidProductName(){
 
         Product product = new Product("1", "", "merchant1", 1, 2);
         BasketHandler productHandler = new ProductFilter();
@@ -56,7 +56,7 @@ public class BasketHandlerTest {
     }
 
     @Test
-    public void testFailChain_Scenario3(){
+    public void testFailChain_InvalidMerchant(){
 
         Product product = new Product("1", "product1", "", 1, 2);
         BasketHandler productHandler = new ProductFilter();
@@ -72,7 +72,7 @@ public class BasketHandlerTest {
         productHandler.handle(product);
     }
     @Test
-    public void testFailChain_Scenario4(){
+    public void testFailChain_InvalidQuantity(){
 
         Product product = new Product("1", "product1", "merchant1", 15, 2);
         BasketHandler productHandler = new ProductFilter();
@@ -89,7 +89,7 @@ public class BasketHandlerTest {
     }
 
     @Test
-    public void testFailChain_Scenario5(){
+    public void testFailChain_InvalidPrice(){
 
         Product product = new Product("1", "product1", "merchant1", 1, -1);
         BasketHandler productHandler = new ProductFilter();
