@@ -14,3 +14,5 @@ It gets request, process it and then transfer it to the next chain. It increases
 
 Request --> Handler --(ok)--> Handler --(ok)--> ..... --(ok)--> Finish
 
+## Singleton
+It provides using same object.
